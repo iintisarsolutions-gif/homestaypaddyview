@@ -1,0 +1,2148 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- --- SEO REQUIREMENTS --- -->
+    <meta name="description" content="Rasai pengalaman percutian kampung premium di Homestay Balik Pulau Paddy View, Pulau Pinang. Nikmati pemandangan sawah padi 360°, kemudahan lengkap, dan aktiviti ekopelancongan menarik.">
+    <meta name="keywords" content="Homestay Balik Pulau, Paddy View, Percutian Kampung, Homestay Pulau Pinang, Eko-pelancongan, Sawah Padi, Tempat Percutian Keluarga">
+    <meta name="author" content="Homestay Balik Pulau Paddy View">
+    
+    <!-- Open Graph (OG) for Social Media / WhatsApp sharing -->
+    <meta property="og:title" content="Homestay Balik Pulau Paddy View | Percutian Kampung Premium">
+    <meta property="og:description" content="Nikmati kedamaian desa sebenar dengan pemandangan sawah padi 360° di Balik Pulau. Tempah percutian keluarga anda sekarang.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://www.paddyviewhomestay.com">
+    <meta property="og:type" content="website">
+
+    <title>Homestay Balik Pulau Paddy View | Percutian Kampung Premium</title>
+    
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- DESIGN TOKENS & VARIABLES --- */
+        :root {
+            --primary: #2d6a4f; /* Hijau Sawah Subur */
+            --primary-dark: #1b4332;
+            --primary-light: #d8f3dc;
+            --accent: #d4a373; /* Kuning Padi Matang / Emas */
+            --accent-light: #fefae0;
+            --neutral-dark: #1e293b; /* Kelabu Gelap */
+            --neutral-light: #f8fafc; /* Latar Belakang */
+            --white: #ffffff;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+        }
+
+        /* --- BASE RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--neutral-light);
+            color: var(--neutral-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* --- REUSABLE COMPONENTS --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 28px;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: var(--radius-sm);
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+            box-shadow: 0 4px 14px rgba(45, 106, 79, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(45, 106, 79, 0.4);
+        }
+
+        .btn-accent {
+            background-color: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 14px rgba(212, 163, 115, 0.3);
+        }
+
+        .btn-accent:hover {
+            background-color: #c29162;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            margin-bottom: 16px;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 60px auto;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+            margin: 12px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+
+        /* --- HEADER & NAVIGATION --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: transparent;
+            transition: var(--transition);
+            padding: 20px 0;
+        }
+
+        header.scrolled {
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            padding: 12px 0;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header.scrolled .logo {
+            color: var(--primary);
+        }
+
+        .logo i {
+            color: var(--accent);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--white);
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+            padding: 6px 0;
+        }
+
+        header.scrolled .nav-link {
+            color: var(--neutral-dark);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--white);
+            cursor: pointer;
+        }
+
+        header.scrolled .menu-toggle {
+            color: var(--primary);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), 
+                        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: var(--white);
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 750px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            max-width: 600px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* --- QUICK INFO RIBBON --- */
+        .info-ribbon {
+            background-color: var(--white);
+            box-shadow: var(--shadow-md);
+            border-radius: var(--radius-md);
+            margin-top: -60px;
+            position: relative;
+            z-index: 10;
+            padding: 30px;
+        }
+
+        .ribbon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+
+        .ribbon-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding-right: 20px;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .ribbon-item:last-child {
+            border-right: none;
+            padding-right: 0;
+        }
+
+        .ribbon-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .ribbon-info h4 {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .ribbon-info p {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        /* --- MENGENAI / ABOUT --- */
+        .about {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-img-container {
+            position: relative;
+        }
+
+        .about-img-main {
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+        }
+
+        .about-badge-card {
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            max-width: 200px;
+            text-align: center;
+        }
+
+        .about-badge-card .rating {
+            font-size: 2.2rem;
+            font-weight: 800;
+            font-family: var(--font-heading);
+            color: var(--accent);
+        }
+
+        .about-badge-card p {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .about-content h3 {
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .about-content p {
+            color: #475569;
+            margin-bottom: 24px;
+            font-size: 1.05rem;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .about-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .about-feature-item i {
+            color: var(--accent);
+        }
+
+        /* --- Ciri Sawah / Seasonal Slider --- */
+        .seasons {
+            padding: 100px 0;
+            background-color: var(--neutral-light);
+        }
+
+        .season-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .season-tab-btn {
+            padding: 12px 24px;
+            background-color: var(--white);
+            border: 1px solid #e2e8f0;
+            border-radius: 50px;
+            font-family: var(--font-body);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .season-tab-btn.active,
+        .season-tab-btn:hover {
+            background-color: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        .season-content-wrapper {
+            position: relative;
+            background-color: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .season-panel {
+            display: none;
+            grid-template-columns: 1.2fr 1fr;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .season-panel.active {
+            display: grid;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.98); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .season-img {
+            height: 450px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .season-info {
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .season-info h3 {
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+
+        .season-months {
+            display: inline-block;
+            align-self: flex-start;
+            padding: 4px 12px;
+            background-color: var(--accent-light);
+            color: #b5804c;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .season-info p {
+            color: #475569;
+            margin-bottom: 24px;
+            font-size: 1.05rem;
+        }
+
+        /* --- KEMUDAHAN / AMENITIES --- */
+        .amenities {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .amenity-card {
+            background-color: var(--neutral-light);
+            padding: 40px 30px;
+            border-radius: var(--radius-md);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid #f1f5f9;
+        }
+
+        .amenity-card:hover {
+            transform: translateY(-5px);
+            background-color: var(--white);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .amenity-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 24px;
+            display: inline-block;
+        }
+
+        .amenity-card h3 {
+            font-family: var(--font-body);
+            font-size: 1.25rem;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+        }
+
+        .amenity-card p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        /* --- TEMPAHAN / BOOKING SYSTEM --- */
+        .booking {
+            padding: 100px 0;
+            background: linear-gradient(rgba(27, 67, 50, 0.9), rgba(27, 67, 50, 0.95)), 
+                        url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            color: var(--white);
+        }
+
+        .booking .section-header h2 {
+            color: var(--white);
+        }
+        
+        .booking .section-header p {
+            color: var(--primary-light);
+        }
+
+        .booking-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 60px;
+            align-items: flex-start;
+        }
+
+        .booking-info-box h3 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .booking-info-box p {
+            font-size: 1.1rem;
+            color: #e2e8f0;
+            margin-bottom: 30px;
+        }
+
+        .pricing-details {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid var(--accent);
+            padding: 24px;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin-bottom: 30px;
+        }
+
+        .pricing-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+
+        .pricing-item:last-child {
+            margin-bottom: 0;
+            font-weight: 700;
+        }
+
+        .pricing-item span.price {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .policy-list {
+            list-style: none;
+        }
+
+        .policy-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: #cbd5e1;
+        }
+
+        .policy-list li i {
+            color: var(--accent);
+        }
+
+        /* Form Tempahan */
+        .booking-card {
+            background-color: var(--white);
+            color: var(--neutral-dark);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .booking-card h3 {
+            font-size: 1.6rem;
+            color: var(--primary-dark);
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--neutral-dark);
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.15);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        /* Kalkulator Hasil Skrin */
+        .calc-result {
+            background-color: var(--neutral-light);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            margin-top: 24px;
+            border: 1px dashed #cbd5e1;
+            display: none; /* Papar bila tarikh dipilih */
+        }
+
+        .calc-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .calc-row.total {
+            border-top: 1px solid #e2e8f0;
+            padding-top: 12px;
+            margin-top: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary-dark);
+        }
+
+        /* --- GALERI / GALLERY --- */
+        .gallery {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 220px);
+            gap: 16px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(27, 67, 50, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-overlay i {
+            color: var(--white);
+            font-size: 2rem;
+            transform: scale(0.8);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-item:hover .gallery-overlay i {
+            transform: scale(1);
+        }
+
+        /* Grid Spanning */
+        .g-col-2 { grid-column: span 2; }
+        .g-row-2 { grid-row: span 2; }
+
+        /* --- LIGHTBOX GALERI --- */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .lightbox-img {
+            width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: var(--radius-sm);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        /* --- AKTIVITI & TARIKAN SEKITAR --- */
+        .activities {
+            padding: 100px 0;
+            background-color: var(--neutral-light);
+        }
+
+        .activities-slider {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .activity-card {
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .activity-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .activity-img-wrapper {
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .activity-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .activity-tag {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 6px 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .activity-body {
+            padding: 30px;
+        }
+
+        .activity-body h3 {
+            font-family: var(--font-body);
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+        }
+
+        .activity-body p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        /* --- TESTIMONIALS --- */
+        .testimonials {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+
+        .testi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testi-card {
+            background-color: var(--neutral-light);
+            padding: 40px;
+            border-radius: var(--radius-md);
+            border: 1px solid #f1f5f9;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .testi-stars {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .testi-text {
+            color: #475569;
+            font-size: 1.05rem;
+            font-style: italic;
+            margin-bottom: 24px;
+        }
+
+        .testi-user {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .testi-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .testi-details h4 {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--primary-dark);
+        }
+
+        .testi-details p {
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        /* --- FAQ SECTION --- */
+        .faq {
+            padding: 100px 0;
+            background-color: var(--neutral-light);
+        }
+
+        .faq-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--white);
+            border-radius: var(--radius-sm);
+            margin-bottom: 16px;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+
+        .faq-question {
+            padding: 24px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            user-select: none;
+        }
+
+        .faq-question i {
+            transition: var(--transition);
+            color: var(--accent);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 24px;
+            color: #475569;
+        }
+
+        .faq-item.active .faq-answer {
+            padding-bottom: 24px;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        /* --- GOOGLE MAP LOCATION --- */
+        .location {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+
+        .map-container {
+            width: 100%;
+            height: 450px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* --- FLOATING WHATSAPP BUTTON --- */
+        .floating-wa {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .floating-wa:hover {
+            transform: scale(1.1);
+            color: var(--white);
+        }
+
+        /* --- HUBUNGI KAMI / CONTACT & FOOTER --- */
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 80px 0 30px 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+            margin-bottom: 24px;
+        }
+
+        .footer-brand p {
+            color: var(--primary-light);
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-btn:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .footer-links h3 {
+            font-family: var(--font-body);
+            font-size: 1.2rem;
+            color: var(--accent);
+            margin-bottom: 24px;
+        }
+
+        .footer-links-list {
+            list-style: none;
+        }
+
+        .footer-links-list li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links-list a {
+            color: var(--primary-light);
+            font-size: 0.95rem;
+        }
+
+        .footer-links-list a:hover {
+            color: var(--accent);
+            padding-left: 6px;
+        }
+
+        .footer-contact-list {
+            list-style: none;
+        }
+
+        .footer-contact-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 16px;
+            color: var(--primary-light);
+            font-size: 0.95rem;
+        }
+
+        .footer-contact-list li i {
+            color: var(--accent);
+            margin-top: 4px;
+        }
+        
+        .footer-contact-list li a {
+            color: var(--primary-light);
+            transition: var(--transition);
+        }
+
+        .footer-contact-list li a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            color: #a3b18a;
+            font-size: 0.9rem;
+        }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media (max-width: 1024px) {
+            .hero h1 { font-size: 3.2rem; }
+            .about-grid { gap: 40px; }
+            .about-img-main { height: 400px; }
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 180px);
+            }
+            .g-col-2-md-hide { grid-column: span 1; }
+        }
+
+        @media (max-width: 768px) {
+            /* Navbar Mobile */
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 40px 24px;
+                gap: 24px;
+                transition: var(--transition);
+                box-shadow: var(--shadow-md);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-link {
+                color: var(--neutral-dark);
+                font-size: 1.1rem;
+                width: 100%;
+                display: block;
+            }
+
+            header.scrolled .nav-menu {
+                top: 60px;
+                height: calc(100vh - 60px);
+            }
+
+            /* Hero */
+            .hero {
+                text-align: center;
+                height: auto;
+                padding: 140px 0 80px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                margin: 0 auto 30px auto;
+            }
+
+            .hero-btns {
+                justify-content: center;
+            }
+
+            /* Ribbon */
+            .info-ribbon {
+                margin-top: 20px;
+            }
+
+            .ribbon-item {
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+                padding-bottom: 16px;
+                padding-right: 0;
+            }
+
+            .ribbon-item:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            /* About */
+            .about { padding: 60px 0; }
+            .about-grid { grid-template-columns: 1fr; }
+            .about-img-container { margin-bottom: 40px; }
+            .about-badge-card { right: 0; bottom: -20px; }
+
+            /* Seasons */
+            .seasons { padding: 60px 0; }
+            .season-panel { grid-template-columns: 1fr; }
+            .season-img { height: 280px; }
+            .season-info { padding: 30px 20px; }
+
+            /* Amenities */
+            .amenities { padding: 60px 0; }
+
+            /* Booking */
+            .booking { padding: 60px 0; }
+            .booking-grid { grid-template-columns: 1fr; gap: 40px; }
+            .booking-card { padding: 24px; }
+
+            /* Gallery */
+            .gallery { padding: 60px 0; }
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 150px);
+            }
+            .g-col-2 { grid-column: span 1; }
+            .g-row-2 { grid-row: span 1; }
+
+            /* Activities */
+            .activities { padding: 60px 0; }
+            .activities-slider { grid-template-columns: 1fr; }
+
+            /* Testimonials */
+            .testimonials { padding: 60px 0; }
+            .testi-grid { grid-template-columns: 1fr; }
+
+            /* FAQ & Map */
+            .faq, .location { padding: 60px 0; }
+            
+            /* Floating WA Mobile Adjustment */
+            .floating-wa {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+                font-size: 1.8rem;
+            }
+
+            /* Footer */
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- --- HEADER / NAVIGATION --- -->
+    <header id="header">
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-wheat-awn"></i> Paddy View
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Utama</a></li>
+                <li><a href="#about" class="nav-link">Mengenai</a></li>
+                <li><a href="#seasons" class="nav-link">Keunikan Sawah</a></li>
+                <li><a href="#amenities" class="nav-link">Kemudahan</a></li>
+                <li><a href="#activities" class="nav-link">Aktiviti</a></li>
+                <li><a href="#booking" class="nav-link">Tempahan</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- --- HERO SECTION --- -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge" style="background-color: rgba(255,255,255,0.2); color: var(--accent-light);">Pelancongan Desa Pulau Pinang</span>
+                <h1>Rasai Keindahan Kampung Berlatarkan <span>Sawah Padi 360°</span></h1>
+                <p>Nikmati kedamaian desa yang sebenar, angin bendang sepoi-sepoi, dan percutian santai yang selesa bersama keluarga di Balik Pulau.</p>
+                <div class="hero-btns">
+                    <a href="#booking" class="btn btn-accent"><i class="fa-regular fa-calendar-check"></i> Semak Tempahan</a>
+                    <a href="#about" class="btn btn-outline" style="border-color: var(--white); color: var(--white);"><i class="fa-solid fa-arrow-down"></i> Ketahui Lanjut</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- QUICK INFO RIBBON --- -->
+    <section class="container" style="position: relative; z-index: 20;">
+        <div class="info-ribbon">
+            <div class="ribbon-grid">
+                <div class="ribbon-item">
+                    <div class="ribbon-icon">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="ribbon-info">
+                        <h4>Penarafan Pelanggan</h4>
+                        <p>4.9 / 5.0 (Hebat)</p>
+                    </div>
+                </div>
+                <div class="ribbon-item">
+                    <div class="ribbon-icon">
+                        <i class="fa-solid fa-tag"></i>
+                    </div>
+                    <div class="ribbon-info">
+                        <h4>Harga Terendah</h4>
+                        <p>Dari RM 250 / Malam</p>
+                    </div>
+                </div>
+                <div class="ribbon-item">
+                    <div class="ribbon-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="ribbon-info">
+                        <h4>Lokasi Eko-Pelancongan</h4>
+                        <p>Balik Pulau, Pulau Pinang</p>
+                    </div>
+                </div>
+                <div class="ribbon-item">
+                    <div class="ribbon-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="ribbon-info">
+                        <h4>Kapasiti Sesuai</h4>
+                        <p>Hingga 10 Orang Tetamu</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- MENGENAI / ABOUT --- -->
+    <section class="about" id="about">
+        <div class="container about-grid">
+            <div class="about-img-container">
+                <img src="sawah padi.png" alt="Sawah Padi Hijau" class="about-img-main">
+                <div class="about-badge-card">
+                    <div class="rating">4.9★</div>
+                    <p>Ulasan Terbaik di Google & Agoda</p>
+                </div>
+            </div>
+            <div class="about-content">
+                <span class="badge">Selamat Datang ke Syurga Desa</span>
+                <h3>Selamat Datang ke Homestay Balik Pulau Paddy View</h3>
+                <p>Terletak di tengah-tengah keindahan Sungai Nipah, Balik Pulau, homestay kami menawarkan penginapan bertemakan suasana rumah kampung tradisional dengan pemandangan sawah padi yang luas terbentang terus dari tingkap bilik anda.</p>
+                <p>Jauh dari hiruk-pikuk metropolitan, di sini anda akan ditemani oleh kicauan burung, udara pagi yang dingin bertiup dari bukit, dan suasana matahari terbenam yang dramatik di balik banjaran gunung.</p>
+                
+                <div class="about-features">
+                    <div class="about-feature-item"><i class="fa-solid fa-circle-check"></i> Kawasan Luar Luas (Sesuai BBQ)</div>
+                    <div class="about-feature-item"><i class="fa-solid fa-circle-check"></i> Sawah Padi di Tepi Rumah</div>
+                    <div class="about-feature-item"><i class="fa-solid fa-circle-check"></i> Bilik Berhawa Dingin</div>
+                    <div class="about-feature-item"><i class="fa-solid fa-circle-check"></i> Sesuai untuk Rombongan Keluarga</div>
+                </div>
+
+                <a href="#booking" class="btn btn-primary">Rancang Percutian Anda</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- KEUNIKAN SAWAH PADI / SEASONS --- -->
+    <section class="seasons" id="seasons">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Keindahan Sepanjang Tahun</span>
+                <h2>Pemandangan Unik Mengikut Musim</h2>
+                <p>Pilih musim percutian anda berdasarkan transformasi keindahan landskap warna bendang kami.</p>
+            </div>
+
+            <div class="season-tabs">
+                <button class="season-tab-btn active" onclick="switchSeason(event, 'hijau')">Sawah Menghijau</button>
+                <button class="season-tab-btn" onclick="switchSeason(event, 'emas')">Lautan Keemasan</button>
+                <button class="season-tab-btn" onclick="switchSeason(event, 'cermin')">Cermin Langit (Pasca-Tuai)</button>
+            </div>
+
+            <div class="season-content-wrapper">
+                <!-- Panel 1: Sawah Menghijau -->
+                <div class="season-panel active" id="hijau">
+                    <img src="padi.jpg" alt="Sawah Padi Hijau Subur" class="season-img">
+                    <div class="season-info">
+                        <span class="season-months">Mei - Julai & Nov - Januari</span>
+                        <h3>Musim Sawah Menghijau</h3>
+                        <p>Sawah padi tumbuh subur kelihatan seperti permaidani hijau raksasa yang menenangkan mata. Ini adalah waktu terbaik untuk menikmati udara pagi yang sangat segar dan berbasikal menyusuri jalan bendang.</p>
+                        <p>Sangat ideal untuk tetamu yang ingin mencari kedamaian fikiran (terapi minda hijau).</p>
+                    </div>
+                </div>
+
+                <!-- Panel 2: Sawah Keemasan -->
+                <div class="season-panel" id="emas">
+                    <img src="padi emas.jpg" alt="Sawah Padi Kuning Keemasan" class="season-img">
+                    <div class="season-info">
+                        <span class="season-months">Februari - Mac & Ogos - September</span>
+                        <h3>Musim Tuai Keemasan</h3>
+                        <p>Apabila padi mula masak, seluruh sawah di sekeliling homestay akan berubah menjadi lautan emas yang berkilauan di bawah pancaran matahari. Suasana ini sangat estetik dan merupakan kegemaran peminat fotografi.</p>
+                        <p>Aroma khas jerami padi yang kering memberikan getaran nostalgia kampung yang sukar dilupakan.</p>
+                    </div>
+                </div>
+
+                <!-- Panel 3: Cermin Langit -->
+                <div class="season-panel" id="cermin">
+                    <img src="sawah paddy.jpeg" alt="Sawah Air Bertakung Cermin" class="season-img">
+                    <div class="season-info">
+                        <span class="season-months">April & Oktober (Fasa Bajak)</span>
+                        <h3>Musim Air & Cermin Alam</h3>
+                        <p>Selepas padi dituai, sawah akan dibajak dan dipenuhi air bertakung. Air yang tenang bertindak seperti cermin gergasi yang memantulkan awan biru pada waktu siang dan sinaran jingga ketika matahari terbenam.</p>
+                        <p>Sesuai untuk melihat pemandangan burung-burung hijrah yang datang mencari makan di kawasan berlumpur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- KEMUDAHAN / AMENITIES --- -->
+    <section class="amenities" id="amenities">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Keselesaan Optimum</span>
+                <h2>Kemudahan Yang Disediakan</h2>
+                <p>Kami menggabungkan elemen rumah kampung tradisional bersama pelbagai kemudahan moden demi keselesaan anda.</p>
+            </div>
+
+            <div class="amenities-grid">
+                <div class="amenity-card">
+                    <span class="amenity-icon"><i class="fa-solid fa-snowflake"></i></span>
+                    <h3>Penghawa Dingin</h3>
+                    <p>Bilik tidur utama dilengkapi AC bertenaga tinggi untuk memastikan anda kekal sejuk dan selesa walaupun cuaca di luar hangat.</p>
+                </div>
+
+                <div class="amenity-card">
+                    <span class="amenity-icon"><i class="fa-solid fa-kitchen-set"></i></span>
+                    <h3>Dapur Lengkap</h3>
+                    <p>Peti sejuk, dapur gas, cerek elektrik, pembakar roti, dan set pinggan mangkuk lengkap disediakan untuk anda memasak hidangan keluarga.</p>
+                </div>
+
+                <div class="amenity-card">
+                    <span class="amenity-icon"><i class="fa-solid fa-fire-burner"></i></span>
+                    <h3>Set Barbeku (BBQ)</h3>
+                    <p>Kawasan pekarangan yang luas di tepi bendang disediakan khas untuk aktiviti memanggang (BBQ) sambil menikmati angin malam.</p>
+                </div>
+
+                <div class="amenity-card">
+                    <span class="amenity-icon"><i class="fa-solid fa-square-parking"></i></span>
+                    <h3>Parkir Luas & Selamat</h3>
+                    <p>Kawasan parkir berpagar yang luas mampu memuatkan hingga 3-4 buah kenderaan dalam satu masa dengan selamat.</p>
+                </div>
+
+                <div class="amenity-card">
+                    <span class="amenity-icon"><i class="fa-solid fa-tv"></i></span>
+                    <h3>Hiburan Keluarga</h3>
+                    <p>Dilengkapi dengan TV LED bersama saluran siaran tempatan dan platform penstriman untuk hiburan anak-anak.</p>
+                </div>
+
+                <div class="amenity-card">
+                    <span class="amenity-icon"><i class="fa-solid fa-shower"></i></span>
+                    <h3>Pemanas Air Mandi</h3>
+                    <p>Bilik air bersih dilengkapi dengan sistem pancuran air panas yang menyegarkan selepas seharian berjalan-jalan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- GALERI / GALLERY --- -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Sudut Menarik</span>
+                <h2>Galeri Paddy View</h2>
+                <p>Intip pemandangan sekitar dan sudut-sudut "Instagrammable" yang menanti ketibaan anda di sini.</p>
+            </div>
+
+            <div class="gallery-grid">
+
+                <!-- Gambar 1 (Besar) -->
+                <div class="gallery-item g-col-2 g-row-2" onclick="openLightbox('padi 1.jpg')">
+                    <img src="padi 1.jpg" alt="Pemandangan Sawah">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                </div>
+
+                <!-- Gambar 2 -->
+                <div class="gallery-item" onclick="openLightbox('padi 2.jpg')">
+                    <img src="padi 2.jpg" alt="Sawah Padi Hijau">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                </div>
+
+                <!-- Gambar 3 -->
+                <div class="gallery-item" onclick="openLightbox('padi 3.jpg')">
+                    <img src="padi 3.jpg" alt="Pemandangan Bendang">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                </div>
+
+                <!-- Gambar 4 -->
+                <div class="gallery-item g-col-2" onclick="openLightbox('padi 4.jpg')">
+                    <img src="padi 4.jpg" alt="Sawah Padi">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                </div>
+
+                <!-- Gambar 5 -->
+                <div class="gallery-item" onclick="openLightbox('padi 5.jpg')">
+                    <img src="padi 5.jpg" alt="Suasana Kampung">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- --- LIGHTBOX BOX MODAL --- -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img class="lightbox-img" id="lightbox-img" src="" alt="Paparan Besar">
+        </div>
+    </div>
+
+    <!-- --- AKTIVITI / ACTIVITIES --- -->
+    <section class="activities" id="activities">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Teroka Balik Pulau</span>
+                <h2>Aktiviti Menarik Berhampiran</h2>
+                <p>Banyak aktiviti eko-pelancongan, pengembaraan, dan buruan makanan hebat sedia menanti anda di sekitar kawasan ini.</p>
+            </div>
+
+            <div class="activities-slider">
+                <!-- Aktiviti 1 -->
+                <div class="activity-card">
+                    <div class="activity-img-wrapper">
+                        <img src="basikal.jpg" alt="Berbasikal Sawah" class="activity-img">
+                        <span class="activity-tag">Santai</span>
+                    </div>
+                    <div class="activity-body">
+                        <h3>Kayuhan Basikal Bendang</h3>
+                        <p>Sewa basikal di sekitar bendang untuk menyusuri jalan kecil di antara sawah padi. Nikmati angin petang yang sejuk serta panorama matahari terbenam yang dramatik.</p>
+                    </div>
+                </div>
+
+                <!-- Aktiviti 2 -->
+                <div class="activity-card">
+                    <div class="activity-img-wrapper">
+                        <img src="durian.jpg" alt="Pemandangan Sawah Padi" class="activity-img">
+                        <span class="activity-tag">Makanan</span>
+                    </div>
+                    <div class="activity-body">
+                        <h3>Memburu Durian & Laksa</h3>
+                        <p>Balik Pulau adalah syurga peminat durian (seperti Udang Merah & Hor Lor) dan Laksa Balik Pulau yang ikonik. Nikmati keenakan makanan tempatan tulen berhampiran homestay.</p>
+                    </div>
+                </div>
+
+                <!-- Aktiviti 3 -->
+                <div class="activity-card">
+                    <div class="activity-img-wrapper">
+                        <img src="lawatan.jpg" alt="Lawatan Ladang" class="activity-img">
+                        <span class="activity-tag">Keluarga</span>
+                    </div>
+                    <div class="activity-body">
+                        <h3>Audi Dream Farm & Kilang Pala</h3>
+                        <p>Hanya beberapa minit memandu untuk ke zoo mini interaktif (Audi Dream Farm) yang amat digemari kanak-kanak, serta kilang tempatan membuat jus buah pala asli.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- TEMPAHAN / BOOKING --- -->
+    <section class="booking" id="booking">
+        <div class="container booking-grid">
+            <div class="booking-info-box">
+                <span class="badge" style="background-color: var(--accent-light); color: var(--primary-dark);">Tempahan Mudah</span>
+                <h3>Sedia untuk Alami Keindahan Kampung?</h3>
+                <p>Sila masukkan tarikh pilihan anda dalam kalkulator tempahan untuk menyemak anggaran sewaan terus ke akaun WhatsApp kami.</p>
+                
+                <div class="pricing-details">
+                    <div class="pricing-item">
+                        <span>Hari Biasa (Ahad - Khamis)</span>
+                        <span class="price">RM 250 / malam</span>
+                    </div>
+                    <div class="pricing-item">
+                        <span>Hujung Minggu & Cuti Awam</span>
+                        <span class="price">RM 300 / malam</span>
+                    </div>
+                    <div class="pricing-item">
+                        <span>Kapasiti Maksimum</span>
+                        <span>10 Orang Tetamu</span>
+                    </div>
+                </div>
+
+                <ul class="policy-list">
+                    <li><i class="fa-solid fa-circle-check"></i> Waktu Daftar Masuk (Check-in): 3.00 PM</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Waktu Daftar Keluar (Check-out): 12.00 PM</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Deposit pengesahan slot tempahan sebanyak RM100 diperlukan</li>
+                </ul>
+            </div>
+
+            <!-- Kad Borang Tempahan -->
+            <div class="booking-card">
+                <h3>Kira Harga & Tanya Slot</h3>
+                <form id="bookingForm" onsubmit="handleBookingSubmit(event)">
+                    <div class="form-group">
+                        <label class="form-label">Nama Penuh</label>
+                        <input type="text" id="bookingName" class="form-control" placeholder="cth. Ahmad Faiz" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Tarikh Daftar Masuk</label>
+                            <input type="date" id="checkIn" class="form-control" required onchange="calculatePrice()">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Tarikh Daftar Keluar</label>
+                            <input type="date" id="checkOut" class="form-control" required onchange="calculatePrice()">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Jumlah Tetamu (Max: 10)</label>
+                            <select id="guests" class="form-control">
+                                <option value="1">1-4 Orang</option>
+                                <option value="5">5-8 Orang</option>
+                                <option value="10">9-10 Orang</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Musim Padi Diminta</label>
+                            <select id="requestedSeason" class="form-control">
+                                <option value="Tiada Keutamaan">Tiada Keutamaan</option>
+                                <option value="Hijau">Sawah Hijau</option>
+                                <option value="Emas">Sawah Emas</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Keputusan Kalkulator Sewaan -->
+                    <div class="calc-result" id="calcResult">
+                        <div class="calc-row">
+                            <span>Jumlah Malam:</span>
+                            <span id="calcNights">0 malam</span>
+                        </div>
+                        <div class="calc-row">
+                            <span>Hari Biasa (<span id="calcWeekdaysCount">0</span>x):</span>
+                            <span id="calcWeekdaysCost">RM 0</span>
+                        </div>
+                        <div class="calc-row">
+                            <span>Hujung Minggu/Cuti (<span id="calcWeekendsCount">0</span>x):</span>
+                            <span id="calcWeekendsCost">RM 0</span>
+                        </div>
+                        <div class="calc-row total">
+                            <span>Anggaran Jumlah Kasar:</span>
+                            <span id="calcTotal">RM 0</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-full" style="width: 100%; margin-top: 20px;">
+                        <i class="fa-brands fa-whatsapp"></i> Hubungi WhatsApp untuk Tempahan
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- TESTIMONIALS --- -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Ulasan Tetamu</span>
+                <h2>Apa Kata Tetamu Kami</h2>
+                <p>Maklum balas jujur daripada keluarga-keluarga yang telah meluangkan masa manis mereka di homestay kami.</p>
+            </div>
+
+            <div class="testi-grid">
+                <!-- Testi 1 -->
+                <div class="testi-card">
+                    <div class="testi-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testi-text">"Pemandangan bendang dari balkoni rumah memang tak dapat dinilai dengan wang ringgit. Pagi-pagi buka pintu terus dapat tengok burung bangau terbang atas sawah menghijau. Anak-anak sangat seronok dapat berbasikal keliling kampung."</p>
+                    <div class="testi-user">
+                        <div class="testi-avatar">KH</div>
+                        <div class="testi-details">
+                            <h4>Khairul Helmi</h4>
+                            <p>Kuala Lumpur (Menginap Jun 2025)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testi 2 -->
+                <div class="testi-card">
+                    <div class="testi-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testi-text">"Homestay bersih, peralatan dapur lengkap. Petang kami buat BBQ tepi bendang sambil tengok sunset. Kawasan sekeliling rasa sangat selamat dan tenang. Owner sangat ramah sedia membantu!"</p>
+                    <div class="testi-user">
+                        <div class="testi-avatar">NS</div>
+                        <div class="testi-details">
+                            <h4>Norshalina</h4>
+                            <p>George Town (Menginap Ogos 2025)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testi 3 -->
+                <div class="testi-card">
+                    <div class="testi-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testi-text">"Sesuai sangat untuk rehatkan minda dari kerja bandar. Udara sangat segar dan sejuk bila malam. Dekat dengan kedai laksa sedap dan senang nak pergi beli durian. Pasti akan repeat balik ke sini hujung tahun nanti!"</p>
+                    <div class="testi-user">
+                        <div class="testi-avatar">AM</div>
+                        <div class="testi-details">
+                            <h4>Azlan M.</h4>
+                            <p>Johor Bahru (Menginap Mac 2026)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- FAQ SECTION --- -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Soalan Lazim</span>
+                <h2>Masih Ada Soalan?</h2>
+                <p>Berikut adalah jawapan bagi soalan-soalan yang sering ditanyakan oleh bakal pelawat kami.</p>
+            </div>
+
+            <div class="faq-wrapper">
+                <div class="faq-item">
+                    <div class="faq-question">Adakah homestay ini menyediakan basikal sewa? <i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        <p>Kami mempunyai beberapa buah basikal santai di homestay untuk digunakan oleh tetamu secara percuma (berdasarkan konsep 'siapa cepat dia dapat'). Untuk kumpulan besar yang memerlukan lebih banyak basikal, kami boleh membantu menghubungkan anda dengan kedai sewaan basikal berdekatan.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Bagaimana saya boleh tahu keadaan musim sawah padi sebelum pergi? <i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        <p>Anda boleh merujuk kepada panduan tab 'Keunikan Sawah' di atas untuk anggaran bulan tanaman, atau cara terbaik adalah dengan menghubungi kami terus melalui WhatsApp. Kami akan berkongsi foto atau video terkini keadaan sawah padi di hadapan homestay kami pada minggu tersebut.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Adakah kawasan homestay ini banyak nyamuk atau serangga? <i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        <p>Sebagai kawasan pertanian semula jadi, kehadiran serangga seperti reriang atau nyamuk pada waktu malam adalah lumrah alam. Walau bagaimanapun, kami menyediakan ubat nyamuk, kelambu, dan jaring nyamuk pada tingkap bagi meminimumkan gangguan dan memastikan keselesaan anda terjamin.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Berapakah kapasiti maksimum homestay ini? <i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        <p>Secara idealnya, homestay kami selesa untuk memuatkan 8 hingga 10 orang dewasa dalam satu-satu masa dengan kelengkapan katil yang disediakan. Sekiranya ada tetamu tambahan, sila maklumkan awal kepada kami untuk penyediaan toto atau tilam tambahan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- GOOGLE MAP EMBED SECTION --- -->
+    <section class="location" id="location">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Lokasi Kami</span>
+                <h2>Peta Homestay Paddy View</h2>
+                <p>Cari jalan anda ke destinasi percutian impian di Sungai Nipah, Balik Pulau, Pulau Pinang dengan mudah.</p>
+            </div>
+            
+            <div class="map-container">
+                <!-- Nota: Ini adalah kordinat contoh untuk Balik Pulau, anda boleh gantikan src iframe ini dengan kod Embed Map lokasi sebenar -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63595.69894269986!2d100.19890289069186!3d5.348427909384705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304a558eb86996bd%3A0xc6fbac0355f3ea7e!2sBalik%20Pulau%2C%20Penang!5e0!3m2!1sen!2smy!4v1718000000000!5m2!1sen!2smy" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- FLOATING WHATSAPP BUTTON --- -->
+    <a href="https://wa.me/60123456789" class="floating-wa" target="_blank" aria-label="Hubungi Kami di WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- --- FOOTER --- -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <i class="fa-solid fa-wheat-awn"></i> Paddy View
+                </a>
+                <p>Destinasi percutian eko-pelancongan kampung terbaik di Balik Pulau, Pulau Pinang. Hubungi kami untuk mengukir memori indah bersama keluarga tersayang.</p>
+                <div class="social-links">
+                    <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Pautan Pantas</h3>
+                <ul class="footer-links-list">
+                    <li><a href="#home">Laman Utama</a></li>
+                    <li><a href="#about">Mengenai Kami</a></li>
+                    <li><a href="#seasons">Musim Sawah Padi</a></li>
+                    <li><a href="#amenities">Kemudahan</a></li>
+                    <li><a href="#booking">Semak Anggaran Tempahan</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Hubungi Kami</h3>
+                <ul class="footer-contact-list">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Sebelah, 243 A, Jalan Sungai Nipah, 11000 Balik Pulau, Pulau Pinang, Malaysia.</span>
+                    </li>
+                    <li>
+                        <!-- CLICK-TO-CALL PHONE BUTTON ADDED HERE -->
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+60123456789">+6012-345 6789 (Wak Jamil)</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:paddyviewbp@gmail.com">paddyviewbp@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Homestay Balik Pulau Paddy View. Hak Cipta Terpelihara.</p>
+            <p>Direka bentuk untuk pengalaman percutian desa terbaik.</p>
+        </div>
+    </footer>
+
+    <!-- --- JAVASCRIPT VANILLA --- -->
+    <script>
+        // 1. Skrol Navigasi Kesan 'Scrolled'
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            // Highlighting pautan menu ketika skrol
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // 2. Navigasi Mobile Toggle Menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if(navMenu.classList.contains('active')) {
+                icon.className = 'fa-solid fa-xmark';
+            } else {
+                icon.className = 'fa-solid fa-bars';
+            }
+        });
+
+        // Tutup menu bila klik mana-mana pautan (di skrin mudah alih)
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuToggle.querySelector('i').className = 'fa-solid fa-bars';
+            });
+        });
+
+        // 3. Tab Interaktif Penukar Musim
+        function switchSeason(evt, seasonId) {
+            // Sembunyikan semua panel musim
+            const panels = document.querySelectorAll('.season-panel');
+            panels.forEach(panel => {
+                panel.classList.remove('active');
+            });
+
+            // Matikan semua butang aktif
+            const buttons = document.querySelectorAll('.season-tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Tampilkan panel yang dipilih & aktifkan butang
+            document.getElementById(seasonId).classList.add('active');
+            evt.currentTarget.classList.add('active');
+        }
+
+        // 4. Kalkulator Sewaan Interaktif
+        function calculatePrice() {
+            const checkInVal = document.getElementById('checkIn').value;
+            const checkOutVal = document.getElementById('checkOut').value;
+            const calcResult = document.getElementById('calcResult');
+
+            if (!checkInVal || !checkOutVal) {
+                calcResult.style.display = 'none';
+                return;
+            }
+
+            const checkInDate = new Date(checkInVal);
+            const checkOutDate = new Date(checkOutVal);
+
+            // Semak tarikh masuk mesti sebelum keluar
+            if (checkOutDate <= checkInDate) {
+                calcResult.style.display = 'none';
+                return;
+            }
+
+            // Kira beza hari
+            const timeDiff = checkOutDate.getTime() - checkInDate.getTime();
+            const totalNights = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+            let weekdayCount = 0;
+            let weekendCount = 0;
+
+            // Ulang setiap hari penginapan untuk tentukan hari biasa @ hujung minggu
+            let currentDate = new Date(checkInDate);
+            for (let i = 0; i < totalNights; i++) {
+                const day = currentDate.getDay(); // 0 = Ahad, 5 = Jumaat, 6 = Sabtu
+                // Hari Jumaat & Sabtu dikira kadar hujung minggu
+                if (day === 5 || day === 6) {
+                    weekendCount++;
+                } else {
+                    weekdayCount++;
+                }
+                currentDate.setDate(currentDate.getDate() + 1);
+            }
+
+            // Kadar Harga
+            const weekdayRate = 250;
+            const weekendRate = 300;
+
+            const weekdayCost = weekdayCount * weekdayRate;
+            const weekendCost = weekendCount * weekendRate;
+            const totalCost = weekdayCost + weekendCost;
+
+            // Kemas kini paparan kalkulator
+            document.getElementById('calcNights').innerText = `${totalNights} malam`;
+            document.getElementById('calcWeekdaysCount').innerText = weekdayCount;
+            document.getElementById('calcWeekdaysCost').innerText = `RM ${weekdayCost}`;
+            document.getElementById('calcWeekendsCount').innerText = weekendCount;
+            document.getElementById('calcWeekendsCost').innerText = `RM ${weekendCost}`;
+            document.getElementById('calcTotal').innerText = `RM ${totalCost}`;
+
+            // Paparkan blok keputusan
+            calcResult.style.display = 'block';
+        }
+
+        // 5. Borang Tempahan Hantar ke WhatsApp
+        function handleBookingSubmit(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('bookingName').value;
+            const checkIn = document.getElementById('checkIn').value;
+            const checkOut = document.getElementById('checkOut').value;
+            const guests = document.getElementById('guests').options[document.getElementById('guests').selectedIndex].text;
+            const season = document.getElementById('requestedSeason').value;
+            
+            // Dapatkan info sebut harga jika dikira
+            const calcNights = document.getElementById('calcNights').innerText || "-";
+            const calcTotal = document.getElementById('calcTotal').innerText || "-";
+
+            // Format mesej WhatsApp yang kemas
+            const phoneNumber = "60123456789"; // Gantikan dengan nombor sebenar pemilik
+            const baseMessage = `Salam Tuan Homestay Paddy View, saya ingin membuat pertanyaan tempahan:\n\n` +
+                                `*Nama:* ${name}\n` +
+                                `*Daftar Masuk:* ${checkIn}\n` +
+                                `*Daftar Keluar:* ${checkOut}\n` +
+                                `*Jumlah Malam:* ${calcNights}\n` +
+                                `*Kumpulan:* ${guests}\n` +
+                                `*Pilihan Musim:* ${season}\n` +
+                                `*Anggaran Harga:* ${calcTotal}\n\n` +
+                                `Adakah slot ini masih kosong? Terima kasih.`;
+
+            const encodedMessage = encodeURIComponent(baseMessage);
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+            // Buka di tab baharu
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // 6. Akordion FAQ Interaktif
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const answer = button.nextElementSibling;
+
+                // Tutup akordion lain yang sedang terbuka (pilihan)
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem && item.classList.contains('active')) {
+                        item.classList.remove('active');
+                        item.querySelector('.faq-answer').style.maxHeight = '0';
+                    }
+                });
+
+                faqItem.classList.toggle('active');
+
+                if (faqItem.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                } else {
+                    answer.style.maxHeight = "0";
+                }
+            });
+        });
+
+        // 7. Lightbox Gambar Galeri
+        function openLightbox(imgSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'flex';
+            lightboxImg.src = imgSrc;
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
