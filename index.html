@@ -463,6 +463,202 @@
             color: var(--accent);
         }
 
+        /* --- JENIS BILIK / ROOM TYPES --- */
+        .rooms {
+            padding: 100px 0;
+            background-color: var(--neutral-light);
+        }
+
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .room-card {
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e2e8f0;
+        }
+
+        .room-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .room-img-wrapper {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .room-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .room-card:hover .room-img {
+            transform: scale(1.05);
+        }
+
+        .room-price-tag {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .room-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .room-title {
+            font-family: var(--font-body);
+            font-size: 1.25rem;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+
+        .room-desc {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+            flex-grow: 1;
+            line-height: 1.5;
+        }
+
+        .room-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 16px;
+            font-size: 0.85rem;
+            color: #475569;
+            font-weight: 600;
+        }
+
+        .room-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .room-meta i {
+            color: var(--accent);
+        }
+
+        /* --- GAYA BAHARU: BORANG TEMPAHAN MIKRO BILIK --- */
+        .room-booking-btn {
+            width: 100%;
+            margin-top: 15px;
+            padding: 12px 20px;
+            font-size: 0.9rem;
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .room-booking-btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .room-mini-form-container {
+            display: none;
+            background-color: #f1f5f9;
+            border-top: 1px solid #cbd5e1;
+            padding: 20px;
+            transition: var(--transition);
+        }
+
+        .room-mini-form-container.active {
+            display: block;
+            animation: slideDown 0.3s ease-out forwards;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .room-mini-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .room-mini-calc-result {
+            background: var(--white);
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            border: 1px dashed var(--primary);
+            font-size: 0.85rem;
+            margin-top: 8px;
+            display: none;
+        }
+
+        .room-mini-calc-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+        }
+
+        .room-mini-calc-row.total {
+            border-top: 1px solid #cbd5e1;
+            padding-top: 8px;
+            margin-top: 4px;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .fittings-list {
+            list-style: none;
+            margin: 15px 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: #475569;
+            border-top: 1px dashed #e2e8f0;
+            padding-top: 12px;
+        }
+
+        .fittings-list li {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .fittings-list li i {
+            color: var(--primary);
+            font-size: 0.8rem;
+        }
+
         /* --- Ciri Sawah / Seasonal Slider --- */
         .seasons {
             padding: 100px 0;
@@ -1341,6 +1537,7 @@
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link active">Utama</a></li>
                 <li><a href="#about" class="nav-link">Mengenai</a></li>
+                <li><a href="#rooms" class="nav-link">Pilhan Penginapan</a></li>
                 <li><a href="#seasons" class="nav-link">Keunikan Sawah</a></li>
                 <li><a href="#amenities" class="nav-link">Kemudahan</a></li>
                 <li><a href="#activities" class="nav-link">Aktiviti</a></li>
@@ -1386,7 +1583,7 @@
                     </div>
                     <div class="ribbon-info">
                         <h4>Harga Terendah</h4>
-                        <p>Dari RM 250 / Malam</p>
+                        <p>Dari RM 80 / Malam</p>
                     </div>
                 </div>
                 <div class="ribbon-item">
@@ -1435,6 +1632,523 @@
                 </div>
 
                 <a href="#booking" class="btn btn-primary">Rancang Percutian Anda</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- SELEKSI BILIK / ROOM TYPES SECTION --- -->
+    <section class="rooms" id="rooms">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Pilihan Penginapan</span>
+                <h2>8 Jenis Bilik Sesuai Bajet Anda</h2>
+                <p>Kami menawarkan pelbagai jenis penginapan bermula daripada bilik single bajet sehinggalah villa eksklusif seluruh keluarga lengkap dengan kemudahan tersendiri.</p>
+            </div>
+
+            <div class="rooms-grid">
+                <!-- Bilik 1 -->
+                <div class="room-card">
+                    <div class="room-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=600&q=80" alt="Bilik Single Klasik" class="room-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/2d6a4f/ffffff?text=Bilik+Single+Klasik'">
+                        <span class="room-price-tag">RM 80 / Malam</span>
+                    </div>
+                    <div class="room-body">
+                        <h3 class="room-title">1. Bilik Single Klasik</h3>
+                        <p class="room-desc">Bilik bajet terbaik untuk pengembara solo. Menawarkan kesederhanaan suasana kampung dengan pengaliran udara kipas angin semula jadi.</p>
+                        
+                        <ul class="fittings-list">
+                            <li><i class="fa-solid fa-bed"></i> 1 Katil Single</li>
+                            <li><i class="fa-solid fa-fan"></i> Kipas Siling</li>
+                            <li><i class="fa-solid fa-wifi"></i> Wifi Percuma</li>
+                            <li><i class="fa-solid fa-restroom"></i> Bilik Air Kongsi</li>
+                            <li><i class="fa-solid fa-plug"></i> Palam Kuasa</li>
+                            <li><i class="fa-solid fa-bottle-water"></i> Air Mineral</li>
+                        </ul>
+
+                        <div class="room-meta">
+                            <span><i class="fa-solid fa-user"></i> 1 Tetamu</span>
+                            <span><i class="fa-solid fa-fan"></i> Kipas Sahaja</span>
+                        </div>
+
+                        <button class="room-booking-btn" onclick="toggleRoomForm(1)">
+                            <i class="fa-regular fa-calendar-check"></i> Tempah Bilik Ini
+                        </button>
+                    </div>
+
+                    <!-- Borang Tempahan Mikro Bilik 1 -->
+                    <div class="room-mini-form-container" id="roomFormContainer-1">
+                        <form class="room-mini-form" onsubmit="handleRoomBookingSubmit(event, 1, 'Bilik Single Klasik', 80, 100)">
+                            <div class="form-group">
+                                <label class="form-label">Nama Penuh</label>
+                                <input type="text" id="roomGuestName-1" class="form-control" placeholder="Nama anda" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Daftar Masuk</label>
+                                    <input type="date" id="roomCheckIn-1" class="form-control" required onchange="calculatePriceForRoom(1, 80, 100)">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Daftar Keluar</label>
+                                    <input type="date" id="roomCheckOut-1" class="form-control" required onchange="calculatePriceForRoom(1, 80, 100)">
+                                </div>
+                            </div>
+                            <div class="room-mini-calc-result" id="roomCalcResult-1">
+                                <div class="room-mini-calc-row">
+                                    <span>Jumlah Malam:</span>
+                                    <span id="roomNightsCount-1">0 malam</span>
+                                </div>
+                                <div class="room-mini-calc-row total">
+                                    <span>Anggaran Kasar:</span>
+                                    <span id="roomTotalCost-1">RM 0</span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full" style="width: 100%; margin-top: 5px;">
+                                <i class="fa-brands fa-whatsapp"></i> Hantar Ke WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Bilik 2 -->
+                <div class="room-card">
+                    <div class="room-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=600&q=80" alt="Bilik Double Standard" class="room-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/2d6a4f/ffffff?text=Bilik+Double+Standard'">
+                        <span class="room-price-tag">RM 120 / Malam</span>
+                    </div>
+                    <div class="room-body">
+                        <h3 class="room-title">2. Bilik Double Standard</h3>
+                        <p class="room-desc">Pilihan selesa dan jimat bagi pasangan pengembara. Dilengkapi katil Queen berkualiti tinggi dan bilik mandi kongsi yang bersih.</p>
+                        
+                        <ul class="fittings-list">
+                            <li><i class="fa-solid fa-bed"></i> 1 Katil Queen</li>
+                            <li><i class="fa-solid fa-fan"></i> Kipas Siling</li>
+                            <li><i class="fa-solid fa-wifi"></i> Wifi Percuma</li>
+                            <li><i class="fa-solid fa-restroom"></i> Bilik Air Kongsi</li>
+                            <li><i class="fa-solid fa-tv"></i> TV LED 32&quot;</li>
+                            <li><i class="fa-solid fa-bottle-water"></i> Air Mineral</li>
+                        </ul>
+
+                        <div class="room-meta">
+                            <span><i class="fa-solid fa-users"></i> 2 Tetamu</span>
+                            <span><i class="fa-solid fa-fan"></i> Kipas Sahaja</span>
+                        </div>
+
+                        <button class="room-booking-btn" onclick="toggleRoomForm(2)">
+                            <i class="fa-regular fa-calendar-check"></i> Tempah Bilik Ini
+                        </button>
+                    </div>
+
+                    <!-- Borang Tempahan Mikro Bilik 2 -->
+                    <div class="room-mini-form-container" id="roomFormContainer-2">
+                        <form class="room-mini-form" onsubmit="handleRoomBookingSubmit(event, 2, 'Bilik Double Standard', 120, 140)">
+                            <div class="form-group">
+                                <label class="form-label">Nama Penuh</label>
+                                <input type="text" id="roomGuestName-2" class="form-control" placeholder="Nama anda" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Daftar Masuk</label>
+                                    <input type="date" id="roomCheckIn-2" class="form-control" required onchange="calculatePriceForRoom(2, 120, 140)">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Daftar Keluar</label>
+                                    <input type="date" id="roomCheckOut-2" class="form-control" required onchange="calculatePriceForRoom(2, 120, 140)">
+                                </div>
+                            </div>
+                            <div class="room-mini-calc-result" id="roomCalcResult-2">
+                                <div class="room-mini-calc-row">
+                                    <span>Jumlah Malam:</span>
+                                    <span id="roomNightsCount-2">0 malam</span>
+                                </div>
+                                <div class="room-mini-calc-row total">
+                                    <span>Anggaran Kasar:</span>
+                                    <span id="roomTotalCost-2">RM 0</span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full" style="width: 100%; margin-top: 5px;">
+                                <i class="fa-brands fa-whatsapp"></i> Hantar Ke WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Bilik 3 -->
+                <div class="room-card">
+                    <div class="room-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80" alt="Bilik Twin Bendang" class="room-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/2d6a4f/ffffff?text=Bilik+Twin+Bendang'">
+                        <span class="room-price-tag">RM 150 / Malam</span>
+                    </div>
+                    <div class="room-body">
+                        <h3 class="room-title">3. Bilik Twin Bendang</h3>
+                        <p class="room-desc">Dua katil bujang berasingan dengan kemudahan penyaman udara. Mempunyai pemandangan sawah bendang hijau langsung dari tingkap bilik.</p>
+                        
+                        <ul class="fittings-list">
+                            <li><i class="fa-solid fa-bed"></i> 2 Katil Single</li>
+                            <li><i class="fa-solid fa-snowflake"></i> Aircond (AC)</li>
+                            <li><i class="fa-solid fa-wifi"></i> Wifi Percuma</li>
+                            <li><i class="fa-solid fa-tv"></i> TV LED 32&quot;</li>
+                            <li><i class="fa-solid fa-mug-hot"></i> Cerek Elektrik</li>
+                            <li><i class="fa-solid fa-restroom"></i> Bilik Air Peribadi</li>
+                        </ul>
+
+                        <div class="room-meta">
+                            <span><i class="fa-solid fa-users"></i> 2 Tetamu</span>
+                            <span><i class="fa-solid fa-snowflake"></i> Aircond</span>
+                        </div>
+
+                        <button class="room-booking-btn" onclick="toggleRoomForm(3)">
+                            <i class="fa-regular fa-calendar-check"></i> Tempah Bilik Ini
+                        </button>
+                    </div>
+
+                    <!-- Borang Tempahan Mikro Bilik 3 -->
+                    <div class="room-mini-form-container" id="roomFormContainer-3">
+                        <form class="room-mini-form" onsubmit="handleRoomBookingSubmit(event, 3, 'Bilik Twin Bendang', 150, 170)">
+                            <div class="form-group">
+                                <label class="form-label">Nama Penuh</label>
+                                <input type="text" id="roomGuestName-3" class="form-control" placeholder="Nama anda" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Daftar Masuk</label>
+                                    <input type="date" id="roomCheckIn-3" class="form-control" required onchange="calculatePriceForRoom(3, 150, 170)">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Daftar Keluar</label>
+                                    <input type="date" id="roomCheckOut-3" class="form-control" required onchange="calculatePriceForRoom(3, 150, 170)">
+                                </div>
+                            </div>
+                            <div class="room-mini-calc-result" id="roomCalcResult-3">
+                                <div class="room-mini-calc-row">
+                                    <span>Jumlah Malam:</span>
+                                    <span id="roomNightsCount-3">0 malam</span>
+                                </div>
+                                <div class="room-mini-calc-row total">
+                                    <span>Anggaran Kasar:</span>
+                                    <span id="roomTotalCost-3">RM 0</span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full" style="width: 100%; margin-top: 5px;">
+                                <i class="fa-brands fa-whatsapp"></i> Hantar Ke WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Bilik 4 -->
+                <div class="room-card">
+                    <div class="room-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=600&q=80" alt="Bilik Queen Cozy" class="room-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/2d6a4f/ffffff?text=Bilik+Queen+Cozy'">
+                        <span class="room-price-tag">RM 180 / Malam</span>
+                    </div>
+                    <div class="room-body">
+                        <h3 class="room-title">4. Bilik Queen Cozy</h3>
+                        <p class="room-desc">Bilik tidur utama yang tenang dan privasi dengan bilik air peribadi. Lengkap dengan penghawa dingin dan televisyen siaran tempatan.</p>
+                        
+                        <ul class="fittings-list">
+                            <li><i class="fa-solid fa-bed"></i> 1 Katil Queen</li>
+                            <li><i class="fa-solid fa-snowflake"></i> Aircond (AC)</li>
+                            <li><i class="fa-solid fa-wifi"></i> Wifi Percuma</li>
+                            <li><i class="fa-solid fa-restroom"></i> Bilik Air En-Suite</li>
+                            <li><i class="fa-solid fa-tv"></i> Smart TV 40&quot;</li>
+                            <li><i class="fa-solid fa-hot-tub-person"></i> Water Heater</li>
+                        </ul>
+
+                        <div class="room-meta">
+                            <span><i class="fa-solid fa-users"></i> 2 Tetamu</span>
+                            <span><i class="fa-solid fa-shower"></i> Aircond & Bilik Air</span>
+                        </div>
+
+                        <button class="room-booking-btn" onclick="toggleRoomForm(4)">
+                            <i class="fa-regular fa-calendar-check"></i> Tempah Bilik Ini
+                        </button>
+                    </div>
+
+                    <!-- Borang Tempahan Mikro Bilik 4 -->
+                    <div class="room-mini-form-container" id="roomFormContainer-4">
+                        <form class="room-mini-form" onsubmit="handleRoomBookingSubmit(event, 4, 'Bilik Queen Cozy', 180, 200)">
+                            <div class="form-group">
+                                <label class="form-label">Nama Penuh</label>
+                                <input type="text" id="roomGuestName-4" class="form-control" placeholder="Nama anda" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Daftar Masuk</label>
+                                    <input type="date" id="roomCheckIn-4" class="form-control" required onchange="calculatePriceForRoom(4, 180, 200)">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Daftar Keluar</label>
+                                    <input type="date" id="roomCheckOut-4" class="form-control" required onchange="calculatePriceForRoom(4, 180, 200)">
+                                </div>
+                            </div>
+                            <div class="room-mini-calc-result" id="roomCalcResult-4">
+                                <div class="room-mini-calc-row">
+                                    <span>Jumlah Malam:</span>
+                                    <span id="roomNightsCount-4">0 malam</span>
+                                </div>
+                                <div class="room-mini-calc-row total">
+                                    <span>Anggaran Kasar:</span>
+                                    <span id="roomTotalCost-4">RM 0</span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full" style="width: 100%; margin-top: 5px;">
+                                <i class="fa-brands fa-whatsapp"></i> Hantar Ke WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Bilik 5 -->
+                <div class="room-card">
+                    <div class="room-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="Bilik King Sawah" class="room-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/2d6a4f/ffffff?text=Bilik+King+Sawah'">
+                        <span class="room-price-tag">RM 220 / Malam</span>
+                    </div>
+                    <div class="room-body">
+                        <h3 class="room-title">5. Bilik King Sawah</h3>
+                        <p class="room-desc">Nikmati rehat mewah dengan katil King premium bersaiz besar bersama balkoni kecil peribadi menghadap hamparan hijau sawah padi 180°.</p>
+                        
+                        <ul class="fittings-list">
+                            <li><i class="fa-solid fa-bed"></i> 1 Katil King</li>
+                            <li><i class="fa-solid fa-mountain-sun"></i> Balkoni Peribadi</li>
+                            <li><i class="fa-solid fa-snowflake"></i> Aircond (AC)</li>
+                            <li><i class="fa-solid fa-mattress-pillow"></i> Tilam Orthopedic</li>
+                            <li><i class="fa-solid fa-box-open"></i> Peti Sejuk Mini</li>
+                            <li><i class="fa-solid fa-tv"></i> Smart TV 43&quot;</li>
+                        </ul>
+
+                        <div class="room-meta">
+                            <span><i class="fa-solid fa-users"></i> 2 Tetamu</span>
+                            <span><i class="fa-solid fa-mountain-sun"></i> Balkoni & Aircond</span>
+                        </div>
+
+                        <button class="room-booking-btn" onclick="toggleRoomForm(5)">
+                            <i class="fa-regular fa-calendar-check"></i> Tempah Bilik Ini
+                        </button>
+                    </div>
+
+                    <!-- Borang Tempahan Mikro Bilik 5 -->
+                    <div class="room-mini-form-container" id="roomFormContainer-5">
+                        <form class="room-mini-form" onsubmit="handleRoomBookingSubmit(event, 5, 'Bilik King Sawah', 220, 250)">
+                            <div class="form-group">
+                                <label class="form-label">Nama Penuh</label>
+                                <input type="text" id="roomGuestName-5" class="form-control" placeholder="Nama anda" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Daftar Masuk</label>
+                                    <input type="date" id="roomCheckIn-5" class="form-control" required onchange="calculatePriceForRoom(5, 220, 250)">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Daftar Keluar</label>
+                                    <input type="date" id="roomCheckOut-5" class="form-control" required onchange="calculatePriceForRoom(5, 220, 250)">
+                                </div>
+                            </div>
+                            <div class="room-mini-calc-result" id="roomCalcResult-5">
+                                <div class="room-mini-calc-row">
+                                    <span>Jumlah Malam:</span>
+                                    <span id="roomNightsCount-5">0 malam</span>
+                                </div>
+                                <div class="room-mini-calc-row total">
+                                    <span>Anggaran Kasar:</span>
+                                    <span id="roomTotalCost-5">RM 0</span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full" style="width: 100%; margin-top: 5px;">
+                                <i class="fa-brands fa-whatsapp"></i> Hantar Ke WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Bilik 6 -->
+                <div class="room-card">
+                    <div class="room-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=600&q=80" alt="Studio Deluks Keluarga" class="room-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/2d6a4f/ffffff?text=Studio+Deluks+Keluarga'">
+                        <span class="room-price-tag">RM 280 / Malam</span>
+                    </div>
+                    <div class="room-body">
+                        <h3 class="room-title">6. Studio Deluks Keluarga</h3>
+                        <p class="room-desc">Bilik jenis studio luas yang ideal untuk keluarga kecil. Mempunyai satu katil Queen, satu katil Single, peti sejuk mini, serta cerek elektrik.</p>
+                        
+                        <ul class="fittings-list">
+                            <li><i class="fa-solid fa-bed"></i> 1 Queen + 1 Single</li>
+                            <li><i class="fa-solid fa-snowflake"></i> Aircond (AC)</li>
+                            <li><i class="fa-solid fa-utensils"></i> Ruang Dapur Mini</li>
+                            <li><i class="fa-solid fa-box-open"></i> Peti Sejuk</li>
+                            <li><i class="fa-solid fa-mug-hot"></i> Cerek & Pembakar</li>
+                            <li><i class="fa-solid fa-tv"></i> Smart TV 43&quot;</li>
+                        </ul>
+
+                        <div class="room-meta">
+                            <span><i class="fa-solid fa-users"></i> 3 Tetamu</span>
+                            <span><i class="fa-solid fa-kitchen-set"></i> Dapur & Aircond</span>
+                        </div>
+
+                        <button class="room-booking-btn" onclick="toggleRoomForm(6)">
+                            <i class="fa-regular fa-calendar-check"></i> Tempah Bilik Ini
+                        </button>
+                    </div>
+
+                    <!-- Borang Tempahan Mikro Bilik 6 -->
+                    <div class="room-mini-form-container" id="roomFormContainer-6">
+                        <form class="room-mini-form" onsubmit="handleRoomBookingSubmit(event, 6, 'Studio Deluks Keluarga', 280, 310)">
+                            <div class="form-group">
+                                <label class="form-label">Nama Penuh</label>
+                                <input type="text" id="roomGuestName-6" class="form-control" placeholder="Nama anda" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Daftar Masuk</label>
+                                    <input type="date" id="roomCheckIn-6" class="form-control" required onchange="calculatePriceForRoom(6, 280, 310)">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Daftar Keluar</label>
+                                    <input type="date" id="roomCheckOut-6" class="form-control" required onchange="calculatePriceForRoom(6, 280, 310)">
+                                </div>
+                            </div>
+                            <div class="room-mini-calc-result" id="roomCalcResult-6">
+                                <div class="room-mini-calc-row">
+                                    <span>Jumlah Malam:</span>
+                                    <span id="roomNightsCount-6">0 malam</span>
+                                </div>
+                                <div class="room-mini-calc-row total">
+                                    <span>Anggaran Kasar:</span>
+                                    <span id="roomTotalCost-6">RM 0</span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full" style="width: 100%; margin-top: 5px;">
+                                <i class="fa-brands fa-whatsapp"></i> Hantar Ke WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Bilik 7 -->
+                <div class="room-card">
+                    <div class="room-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=600&q=80" alt="Kotej Sawah Padi Villa" class="room-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/2d6a4f/ffffff?text=Kotej+Sawah+Padi+Villa'">
+                        <span class="room-price-tag">RM 450 / Malam</span>
+                    </div>
+                    <div class="room-body">
+                        <h3 class="room-title">7. Kotej Sawah Padi Villa</h3>
+                        <p class="room-desc">Unit kotej persendirian bertentangan terus dengan bendang. Dilengkapi 2 katil Queen, ruang makan terbuka, ruang tamu berasingan, dan dapur mini.</p>
+                        
+                        <ul class="fittings-list">
+                            <li><i class="fa-solid fa-house"></i> Kotej Persendirian</li>
+                            <li><i class="fa-solid fa-bed"></i> 2 Katil Queen</li>
+                            <li><i class="fa-solid fa-couch"></i> Ruang Tamu Khas</li>
+                            <li><i class="fa-solid fa-sink"></i> Dapur Lengkap</li>
+                            <li><i class="fa-solid fa-fire-burner"></i> Set BBQ Peribadi</li>
+                            <li><i class="fa-solid fa-mountain-sun"></i> Balkoni Sawah Luas</li>
+                        </ul>
+
+                        <div class="room-meta">
+                            <span><i class="fa-solid fa-users"></i> 4 Tetamu</span>
+                            <span><i class="fa-solid fa-house-chimney"></i> Kotej Peribadi</span>
+                        </div>
+
+                        <button class="room-booking-btn" onclick="toggleRoomForm(7)">
+                            <i class="fa-regular fa-calendar-check"></i> Tempah Bilik Ini
+                        </button>
+                    </div>
+
+                    <!-- Borang Tempahan Mikro Bilik 7 -->
+                    <div class="room-mini-form-container" id="roomFormContainer-7">
+                        <form class="room-mini-form" onsubmit="handleRoomBookingSubmit(event, 7, 'Kotej Sawah Padi Villa', 450, 500)">
+                            <div class="form-group">
+                                <label class="form-label">Nama Penuh</label>
+                                <input type="text" id="roomGuestName-7" class="form-control" placeholder="Nama anda" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Daftar Masuk</label>
+                                    <input type="date" id="roomCheckIn-7" class="form-control" required onchange="calculatePriceForRoom(7, 450, 500)">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Daftar Keluar</label>
+                                    <input type="date" id="roomCheckOut-7" class="form-control" required onchange="calculatePriceForRoom(7, 450, 500)">
+                                </div>
+                            </div>
+                            <div class="room-mini-calc-result" id="roomCalcResult-7">
+                                <div class="room-mini-calc-row">
+                                    <span>Jumlah Malam:</span>
+                                    <span id="roomNightsCount-7">0 malam</span>
+                                </div>
+                                <div class="room-mini-calc-row total">
+                                    <span>Anggaran Kasar:</span>
+                                    <span id="roomTotalCost-7">RM 0</span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full" style="width: 100%; margin-top: 5px;">
+                                <i class="fa-brands fa-whatsapp"></i> Hantar Ke WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Bilik 8 -->
+                <div class="room-card">
+                    <div class="room-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=600&q=80" alt="Villa Eksklusif Paddy View" class="room-img" onerror="this.onerror=null;this.src='https://placehold.co/600x400/2d6a4f/ffffff?text=Villa+Eksklusif+Paddy+View'">
+                        <span class="room-price-tag">RM 800 / Malam</span>
+                    </div>
+                    <div class="room-body">
+                        <h3 class="room-title">8. Villa Eksklusif Paddy View (Seluruh)</h3>
+                        <p class="room-desc">Pakej sewaan seluruh homestay. Memiliki 4 bilik tidur berhawa dingin sepenuhnya, dapur memasak berskala besar, set BBQ lengkap dan ruang komuniti.</p>
+                        
+                        <ul class="fittings-list">
+                            <li><i class="fa-solid fa-key"></i> Seluruh Villa</li>
+                            <li><i class="fa-solid fa-door-open"></i> 4 Bilik Tidur AC</li>
+                            <li><i class="fa-solid fa-water"></i> Kolam Renang Mini</li>
+                            <li><i class="fa-solid fa-kitchen-set"></i> Dapur Besar Lengkap</li>
+                            <li><i class="fa-solid fa-users-gear"></i> Set BBQ Premium</li>
+                            <li><i class="fa-solid fa-square-parking"></i> Parking Berpagar</li>
+                        </ul>
+
+                        <div class="room-meta">
+                            <span><i class="fa-solid fa-people-group"></i> Hingga 10 Tetamu</span>
+                            <span><i class="fa-solid fa-key"></i> Seluruh Villa</span>
+                        </div>
+
+                        <button class="room-booking-btn" onclick="toggleRoomForm(8)">
+                            <i class="fa-regular fa-calendar-check"></i> Tempah Bilik Ini
+                        </button>
+                    </div>
+
+                    <!-- Borang Tempahan Mikro Bilik 8 -->
+                    <div class="room-mini-form-container" id="roomFormContainer-8">
+                        <form class="room-mini-form" onsubmit="handleRoomBookingSubmit(event, 8, 'Villa Eksklusif Paddy View', 800, 900)">
+                            <div class="form-group">
+                                <label class="form-label">Nama Penuh</label>
+                                <input type="text" id="roomGuestName-8" class="form-control" placeholder="Nama anda" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Daftar Masuk</label>
+                                    <input type="date" id="roomCheckIn-8" class="form-control" required onchange="calculatePriceForRoom(8, 800, 900)">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Daftar Keluar</label>
+                                    <input type="date" id="roomCheckOut-8" class="form-control" required onchange="calculatePriceForRoom(8, 800, 900)">
+                                </div>
+                            </div>
+                            <div class="room-mini-calc-result" id="roomCalcResult-8">
+                                <div class="room-mini-calc-row">
+                                    <span>Jumlah Malam:</span>
+                                    <span id="roomNightsCount-8">0 malam</span>
+                                </div>
+                                <div class="room-mini-calc-row total">
+                                    <span>Anggaran Kasar:</span>
+                                    <span id="roomTotalCost-8">RM 0</span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full" style="width: 100%; margin-top: 5px;">
+                                <i class="fa-brands fa-whatsapp"></i> Hantar Ke WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1909,6 +2623,7 @@
                 <ul class="footer-links-list">
                     <li><a href="#home">Laman Utama</a></li>
                     <li><a href="#about">Mengenai Kami</a></li>
+                    <li><a href="#rooms">Pilihan Penginapan</a></li>
                     <li><a href="#seasons">Musim Sawah Padi</a></li>
                     <li><a href="#amenities">Kemudahan</a></li>
                     <li><a href="#booking">Semak Anggaran Tempahan</a></li>
@@ -2142,6 +2857,94 @@
         function closeLightbox() {
             const lightbox = document.getElementById('lightbox');
             lightbox.style.display = 'none';
+        }
+
+        // 8. Logik Pembukaan & Pengiraan Borang Mikro Bilik
+        function toggleRoomForm(roomId) {
+            const container = document.getElementById(`roomFormContainer-${roomId}`);
+            
+            // Tutup semua borang mikro lain terlebih dahulu
+            document.querySelectorAll('.room-mini-form-container').forEach(el => {
+                if(el.id !== `roomFormContainer-${roomId}`) {
+                    el.classList.remove('active');
+                }
+            });
+
+            container.classList.toggle('active');
+            
+            if(container.classList.contains('active')) {
+                container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        function calculatePriceForRoom(roomId, weekdayRate, weekendRate) {
+            const checkInVal = document.getElementById(`roomCheckIn-${roomId}`).value;
+            const checkOutVal = document.getElementById(`roomCheckOut-${roomId}`).value;
+            const calcResult = document.getElementById(`roomCalcResult-${roomId}`);
+
+            if (!checkInVal || !checkOutVal) {
+                calcResult.style.display = 'none';
+                return;
+            }
+
+            const checkInDate = new Date(checkInVal);
+            const checkOutDate = new Date(checkOutVal);
+
+            if (checkOutDate <= checkInDate) {
+                calcResult.style.display = 'none';
+                return;
+            }
+
+            const timeDiff = checkOutDate.getTime() - checkInDate.getTime();
+            const totalNights = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+            let weekdayCount = 0;
+            let weekendCount = 0;
+
+            let currentDate = new Date(checkInDate);
+            for (let i = 0; i < totalNights; i++) {
+                const day = currentDate.getDay(); 
+                if (day === 5 || day === 6) {
+                    weekendCount++;
+                } else {
+                    weekdayCount++;
+                }
+                currentDate.setDate(currentDate.getDate() + 1);
+            }
+
+            const weekdayCost = weekdayCount * weekdayRate;
+            const weekendCost = weekendCount * weekendRate;
+            const totalCost = weekdayCost + weekendCost;
+
+            document.getElementById(`roomNightsCount-${roomId}`).innerText = `${totalNights} malam (${weekdayCount} Hari Biasa, ${weekendCount} Hujung Minggu)`;
+            document.getElementById(`roomTotalCost-${roomId}`).innerText = `RM ${totalCost}`;
+            
+            calcResult.style.display = 'block';
+        }
+
+        function handleRoomBookingSubmit(event, roomId, roomName, weekdayRate, weekendRate) {
+            event.preventDefault();
+
+            const name = document.getElementById(`roomGuestName-${roomId}`).value;
+            const checkIn = document.getElementById(`roomCheckIn-${roomId}`).value;
+            const checkOut = document.getElementById(`roomCheckOut-${roomId}`).value;
+            const nights = document.getElementById(`roomNightsCount-${roomId}`).innerText;
+            const total = document.getElementById(`roomTotalCost-${roomId}`).innerText;
+
+            const phoneNumber = "60123456789"; 
+            const baseMessage = `Salam Tuan Homestay Paddy View, saya ingin membuat pertanyaan tempahan bilik:\n\n` +
+                                `*Pilihan Bilik:* ${roomName}\n` +
+                                `*Nama:* ${name}\n` +
+                                `*Daftar Masuk:* ${checkIn}\n` +
+                                `*Daftar Keluar:* ${checkOut}\n` +
+                                `*Jumlah Penginapan:* ${nights}\n` +
+                                `*Anggaran Harga:* ${total}\n\n` +
+                                `Adakah slot bilik ini masih kosong? Terima kasih.`;
+
+            const encodedMessage = encodeURIComponent(baseMessage);
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+            window.open(whatsappUrl, '_blank');
         }
     </script>
 </body>
